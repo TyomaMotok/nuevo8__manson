@@ -1,0 +1,410 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;0,900;1,400;1,700&display=swap');
+
+@font-face {
+    font-family: Montserrat ;
+    src: url(../montserrat/Montserrat-Medium.woff2) format('woff2'), url(../montserrat/Montserrat-Medium.woff) format('woff');
+    font-display: swap;
+    font-style: normal;
+    font-weight: 500;
+}
+
+/* ------------------------------------------------ */
+
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+li {
+	list-style: none;
+}
+a,
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: inherit;
+	font-size: inherit;
+}
+img {
+	vertical-align: top;
+}
+
+
+/* ------------------------------------------------ */
+
+body{
+    font-family: Montserrat ;
+    background: url(../img/mark_drawing_compressed.jpeg) left 200px / 300px no-repeat, url(../img/cover_right_compressed.jpeg) right 200px / 300px no-repeat;
+}
+
+main{
+    margin-bottom: 300px ;
+}
+
+
+.header__logo span {
+    font-size: 46px;
+    font-weight: 700;
+    line-height: 60px;
+    color: rgb(51, 51, 51);
+    display: inline-block;
+}
+
+
+.header__logo:hover{
+    border-bottom: 2px dotted #000;
+    color: rgb(20, 20, 20);
+}
+
+.header__logo{
+    display: inline-block;
+}
+
+
+
+.header__logo span:active::after{
+    content: '';
+    background-image: url(../img/25426.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+
+}
+
+.header__contant{
+    display: flex;
+    justify-content: center;
+}
+
+.header__list > li {
+    display: inline-block;
+}
+
+.header__list > li:not(:last-child){
+    margin: 0 30px 0 0;
+}
+
+
+
+
+li > ul{
+    padding: 0;
+
+
+}
+
+li > ul a{
+    color: #000;
+    padding: 5px 5px;
+}
+
+li > ul a:hover{
+    text-decoration: underline;
+    background-color: #000;
+    color: white;
+}
+
+.header__list li > ul{
+    margin-top: 10px ;
+    line-height: 1.5;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.about-li + li:hover{
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+
+/* --------------------------------- */
+
+
+.header__list{
+    display: flex;
+    margin-top: 40px;
+    
+}
+
+
+
+.articles__list{
+    visibility: hidden;
+    opacity: 0;
+}
+
+.article:hover .articles__list{
+    visibility: visible;
+    opacity: 1;
+}
+
+.books__list{
+    visibility: hidden;
+    opacity: 0;
+}
+
+.books:hover .books__list{
+    visibility: visible;
+    opacity: 1;
+}
+
+.news__list{
+    visibility: hidden;
+    opacity: 0;
+}
+.news:hover .news__list{
+    visibility: visible;
+    opacity: 1;
+}
+
+.about__list{
+    visibility: hidden;
+    opacity: 0;
+}
+
+.about-li:hover .about__list{
+    visibility: visible;
+    opacity: 1;
+}
+
+/* --------------------------------- */
+
+
+.main__container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.main__content {
+    max-width: 710px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 50px ;
+}
+.main__body {
+    margin: 0 0 50px 0;
+}
+.main__title {
+    font-size: 65px;
+    font-weight: 700;
+    line-height: 1.3;
+}
+.description {
+    line-height: 1.6;
+}
+
+.description a{
+    color: rgb(68, 68, 172);
+}
+
+.description a:hover{
+    font-style: italic;
+    text-decoration: underline;
+}
+
+.description + p a:hover{
+    color: rgb(68, 68, 172);
+    text-decoration: underline;
+}
+
+
+.description a:active{
+    color: red;
+}
+
+.join a:visited {
+    color: rgb(147, 0, 0);
+}
+
+
+.buttons a:not(:last-child) {
+    margin-right: 30px;
+}
+
+.buttons a{
+    padding: 20px 40px;
+    border: 1px solid #000;
+    color: black;
+    text-transform: uppercase;
+    
+}
+
+.buttons a:first-child::before{
+    content:'';
+    display: inline-block;
+    background-image: url('../img/file__black_really.png');
+    background-size: 16px;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 16px;
+    width: 16px;
+    padding: 0 40px 0 0;
+}
+
+
+/* .buttons a:first-child:hover{
+    background-color: black;
+    color: white;
+} */
+
+.buttons a:first-child:hover::before{
+    content:'';
+    display: inline-block;
+    background-image: url('../img/file__black.png');
+    background-size: 16px;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 16px;
+    width: 16px;
+}
+
+
+
+.buttons a:last-child::before{
+    content:'';
+    display: inline-block;
+    background-image: url('../img/user.png');
+    background-size: 18px;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 18px;
+    width: 18px;
+    padding: 0 40px 0 0;
+}
+
+
+.hi__block{
+    max-width: 80px;
+    padding: 30px 0;
+    background-color: blueviolet;
+    color: white;
+    text-align: center;
+}
+
+.hi__block span{
+    visibility: hidden;
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+.hi__block:hover{
+    max-width: none;
+}
+
+.hi__block:hover span{
+    visibility: visible;
+}
+
+/* ------------------------------------ */
+
+.game-itm{
+    background-color: rgb(86, 167, 167);
+}
+
+/* ------------------------------------ */
+
+.footer {
+}
+
+.footer__container{
+    max-width: 810px;
+    margin: 0 auto;
+}
+
+.footer__game {
+    height: 700px;
+}
+.game__items {
+}
+
+.game__start {
+    max-width: 50px;
+    height: 50px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 700;
+
+}
+.game__item__one {
+    width: 50px;
+    height: 50px;
+
+}
+
+.game__item__one:hover{
+    width: 700px;
+}
+
+.game__item__two {
+    width: 650px;
+    height: 50px;
+    opacity: 0;
+    display: inline-block;
+}
+
+.game__item__two{
+    width: 646px;
+    height: 50px;
+    display: inline-block;
+    visibility: hidden;
+}
+
+.game__item__three {
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    opacity: 0;
+}
+
+.game__item__one:hover ~ .game__item__three{
+    opacity: 1;
+}
+
+.game__item__three:hover{
+    opacity: 1;
+    height: 200px;
+    display: inline-block;
+}
+
+
+
+
+.game__item__four {
+    width: 646px;
+    height: 50px;
+    display: inline-block;
+    opacity: 0;
+}
+
+.game__item__five{
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    opacity: 0;
+}
+
+.game__item__three:hover ~ .game__item__five{
+    opacity: 1;
+}
+
+.game__item__five:hover{
+}
+
+
+
+
+
